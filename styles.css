@@ -1,0 +1,538 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* Animations */
+@keyframes animate {
+    0%, 100%
+    {
+        transform: translateY(10px);
+    }
+    
+    50%
+    {
+        transform: translate(-10px);
+    }
+}
+
+
+/* Style */
+html {
+    scroll-behavior: smooth;
+    scroll-margin: 0px;
+    scroll-padding: 0px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    scroll-padding-top: 0px;
+    scroll-padding-bottom: 0px;
+}
+
+body {
+    top: 0;
+    margin: 0px auto;
+    padding: 0px;
+    display: flexbox;
+    flex-direction: row;
+    scroll-snap-type: proximity;
+}
+
+nav {
+    flex-basis: 20%;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 1fr 0fr 1fr;
+    border-bottom-right-radius: 0.8vh;
+    border-bottom-left-radius: 0.8vh;
+    min-width: 90vw;
+    max-width: 99.5vw;
+    max-height: 10vh;
+    min-height: 9.5vh;
+    margin: 0px;
+    top: 0;
+    position: sticky;
+    box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.589);
+    z-index: 2;
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    backdrop-filter: blur(10px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.212);
+}
+
+nav div ul {
+    border-radius: 6px;
+    background-color: transparent;
+    color: #333;
+}
+
+nav div ul li {
+    list-style: none;
+    display: inline;
+}
+
+nav div ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.04fr;
+    padding: 0vh 0vw;
+    margin: 0vh 0vw;
+    background-color: rgb(9, 25, 26);
+    width: 100%;
+    min-height: 10vh;
+    max-height: 40vh;
+}
+
+footer .footer-content {
+    margin: 0vh 0vw;
+    min-width: 99.5%;
+    max-width: 100%;
+    min-height: 48%;
+    max-height: 100%;
+    padding: 3vh 3vw;
+    position: static;
+    color: #e0ba10;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+footer .footer-content h1 {
+    font-size: 4.5vh;
+    color: #ffd000;
+}
+
+footer .social-media {
+    margin: 1vh 0vw 1vh 1vw;
+    padding: 3vh 0.1vw;
+    display: block;
+}
+
+footer .social-media ul {
+    padding: 1vh 0vw;
+    margin: 0.5vh 0vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    background-color: #6b000044;
+    border-top-left-radius: 1vh;
+    border-bottom-left-radius: 1vh;
+}
+
+footer .social-media ul li {
+    list-style: none;
+    display: inline;
+    margin: 1vh 1vw;
+    padding: 0vh 0vw;
+}
+
+footer .social-media ul li a {
+    text-decoration: none;
+    font-size: 2.6vh;
+    padding: 0vh 0vw;
+    margin: 0vh 0vw;
+}
+
+footer .social-media ul li a i{
+    margin: 0vh 0vw;
+    padding: 0vh 0vw;
+}
+
+footer span .copyright-info {
+    text-align: right;
+    margin-top: 10%;
+    padding: 0vh 5vw;
+    color: #cccccc;
+}
+
+.navbar {
+    margin: 0px;
+    padding: 0.1vh 0.1vw;
+    font-size: 1.9vh;
+    text-align: right;
+}
+
+.navbar ul {
+    padding: 1vh 2vw;
+}
+
+.navbar ul li a {
+    margin: 1vh;
+    display: inline-block;
+    transition: transform 100ms linear, text-shadow 0.2s ease;
+}
+
+.navbar ul li a:hover {
+    transform: scale(1.17);
+    text-shadow: rgba(255, 243, 136, 0.678) 0.2vh 0.2vh 0.2vh;
+}
+
+.navbar ul li .login {
+    color:black;
+    transition: color 0.2s ease, transform 100ms linear, text-shadow 0.2s ease;
+}
+
+.navbar ul li .login:hover {
+    color: rgb(202, 161, 23);
+    transform: scale(1.17);
+    text-shadow: rgba(255, 243, 136, 0.76) 0.2vh 0.2vh 0.2vh;
+}
+
+.logo {
+    align-items: left;
+    display: inline;
+    padding: 0px;
+    margin: 0px;
+}
+
+.logo a img {
+    object-fit: cover;
+    min-width: 4vw;
+    max-width: 4vw;
+    max-height: 4vw;
+    margin: 0vh 0vw;
+    padding: 0vh 0vw;
+    image-resolution: from-image;
+    transition: transform 0.5s ease;
+}
+
+.logo a img:hover {
+    transform: scale(1.05);
+}
+
+#home {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 5vw;
+    margin: 0px;
+}
+
+.home-content {
+    text-align: center;
+    margin: 8.3vh 5vw;
+    min-width: 25.238vw;
+    max-width: 30vw;
+    min-height: 19vh;
+    max-height: 20vh;
+    padding: 17vh 7vw;
+    background-color: rgba(255, 221, 108, 0.822);
+    border-radius: 1vh;
+    box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.8);
+    position: static;
+    overflow: hidden;
+}
+
+.home-content h1 {
+    font-size: 5vh;
+    color: #6b0000;
+}
+
+.home-content p {
+    font-size: 2.2vh;
+    color: #161515;
+}
+
+.home-content {
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 2vh;
+        background-color: #333;
+        padding: 0.5vh 0.5vw;
+        border-radius: 0.4vh;
+        position: relative;
+        display: block;
+        text-transform: uppercase;
+        margin: 0vh 8vw;
+        text-decoration: none;
+        font-weight: 600;
+        transition: .5s;
+        z-index: 1;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-top: 2px solid #111;
+          border-bottom: 2px solid #111;
+          transform: scaleY(2);
+          opacity: 0;
+          transition: .3s;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: 2px;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #222;
+          transform: scale(0);
+          opacity: 0;
+          transition: .3s;
+          z-index: -1;
+        }
+        &:hover {
+          color: #fff;
+          &:before {
+            transform: scaleY(1);
+            opacity: 1;
+          }
+          &:after {
+            transform: scaleY(1);
+            opacity: 1;
+          }
+        }
+    }
+}
+
+#home .bg-img {
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    image-resolution: from-image;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0vh 0vw;
+    margin: 0vh 0vw;
+}
+
+#services {
+    padding: 4vh 4vw;
+    margin: 0vh 0vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Fonts */
+.bx {
+    font-family: boxicons !important;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    display: inline-block;
+    text-transform: none;
+    speak-as: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 0px;
+    margin: auto 6vh;
+}
+
+.bxl-facebook {
+    color: #333;
+    font-size: 2.6vh;
+    transition: color 0.5s ease;
+}
+
+.bxl-facebook:hover{
+    color: rgba(105, 54, 224, 0.932);
+}
+
+footer .social-media .bxl-facebook {
+    color: #999999;
+    font-size: 2.6vh;
+    transition: color 0.5s ease;
+}
+
+footer .social-media .bxl-facebook:hover {
+    color: #0011ff;
+}
+
+.bxl-instagram {
+    color: #333;
+    font-size: 2.6vh;
+    transition: color 0.5s ease;
+}
+
+.bxl-instagram:hover{
+    color: rgba(255, 0, 132, 0.932);
+}
+
+footer .social-media .bxl-instagram {
+    color: #999999;
+    font-size: 2.6vh;
+    transition: color 0.5s ease;
+}
+
+footer .social-media .bxl-instagram:hover {
+    color: rgba(255, 0, 132, 0.932);
+}
+
+.bxl-gmail {
+    color: #333;
+    font-size: 2.6vh;
+    transition: color 0.5s ease;
+}
+
+.bxl-gmail:hover{
+    color: rgba(255, 0, 0, 0.932);
+}
+
+footer .social-media .bxl-gmail {
+    color: #999999;
+    font-size: 2.6vh;
+    transition: color 0.5s ease;
+}
+
+footer .social-media .bxl-gmail:hover {
+    color: rgba(255, 0, 0, 0.932);
+}
+
+.bxl-linkedin {
+    color: #333;
+    font-size: 2.6vh;
+    transition: color 0.5s ease;
+}
+
+.bxl-linkedin:hover{
+    color: rgba(0, 119, 181, 0.932);
+}
+
+footer .social-media .bxl-linkedin {
+    color: #999999;
+    font-size: 2.6vh;
+    transition: color 0.5s ease;
+}
+
+footer .social-media .bxl-linkedin:hover {
+    color: rgba(0, 119, 181, 0.932);
+}
+
+.jetBrains-Mono-regular {
+    font-family: "JetBrains Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.jetBrains-Mono-italic {
+    font-family: "JetBrains Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.jetBrains-Mono-regularBold {
+    font-family: "JetBrains Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.jetBrains-Mono-italicBold {
+    font-family: "JetBrains Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.ubuntu-light {
+    font-family: "Ubuntu", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+  
+.ubuntu-regular {
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.ubuntu-medium {
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+  
+.ubuntu-bold {
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+.ubuntu-light-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+  
+.ubuntu-regular-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+  
+.ubuntu-medium-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-style: italic;
+}
+  
+.ubuntu-bold-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.roboto-light {
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.roboto-regular {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-medium {
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.roboto-bold {
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.roboto-light-italic {
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.roboto-regular-italic {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.roboto-medium-italic {
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.roboto-bold-italic {
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    font-style: italic;
+}
